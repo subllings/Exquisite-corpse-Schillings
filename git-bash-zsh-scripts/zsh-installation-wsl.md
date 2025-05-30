@@ -115,6 +115,34 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 Follow the on-screen instructions to complete the setup.
 
-## Summary
+## Conclusion
 
-You have now successfully installed and configured Zsh on WSL with Ubuntu 22.04.5 LTS.
+### Zsh Installed and Ready
+
+You have now installed and configured **Zsh** on **WSL** with **Ubuntu 22.04.5 LTS**.
+
+### How to Run Zsh Scripts in Visual Studio Code
+
+To run your Zsh scripts directly in Visual Studio Code:
+
+1. Open your project in VS Code.
+2. Open a new terminal.
+3. In the terminal dropdown, select:
+
+```
+Ubuntu-22.04(WSL)
+```
+
+This opens a WSL-based Ubuntu shell where you can run Zsh scripts like this:
+
+```zsh
+zsh your-script-name.zsh
+```
+
+Or, if the script is executable:
+
+```zsh
+./your-script-name.zsh
+```
+
+No further configuration needed, your WSL terminal is already running Zsh on Ubuntu.
