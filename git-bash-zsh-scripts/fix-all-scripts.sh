@@ -26,7 +26,6 @@ for script in *.sh; do
     chmod +x "$script"
 
     echo "    Done: $script processed."
-    echo "----------------------------------------"
   fi
 done
 
