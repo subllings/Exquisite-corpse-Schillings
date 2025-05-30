@@ -44,8 +44,8 @@ fi
 cd "$TARGET_DIR" || { echo "Error: Cannot enter directory"; exit 1; }
 
 # Git identity (required if commits are created later)
-git config --global user.name "subllings"
-git config --global user.email "subllings@gmail.com"
+git config --global user.name "your Git account name"
+git config --global user.email "your Git account email"
 
 # Show the first commits
 echo -e "\n# Showing first commits in the repository:\n"
