@@ -5,8 +5,10 @@
 # ──────────────────────────────────────────────────────────────
 # Title: Exercise 2 - Git Logs & Checkout - Time Machine
 #
-# Description: This script clones a repo, explores its commit history, and traces
-#              the evolution of the variable TARGET in client.py
+# Description: This script checks (and clones if needed) a Git repository,
+#              explores its commit history, identifies the first commit,
+#              and traces the evolution of the variable TARGET in client.py
+#              using grep, log, and diff operations.
 #
 # Author: Yves Schillings
 # Date: 28-05-2025
