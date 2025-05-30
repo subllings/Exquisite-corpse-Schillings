@@ -5,8 +5,9 @@
 # ──────────────────────────────────────────────────────────────
 # Title: Exercise 1 - Git Init & First Commits
 #
-# Description: This script clones a repo, explores its commit history, and traces
-#              the evolution of the variable TARGET in my_code.py
+# Description: This script initializes a new Git repository, creates
+#              a Python file (client.py), performs several commits,
+#              and displays the commit history.
 #
 # Author: Yves Schillings
 # Date: 28-05-2025
@@ -50,19 +51,19 @@ git init
 echo -e "\n# Git status after init\n"
 git status
 
-echo -e "\n# Create my_code.py\n"
-echo "# My initial Python code" > my_code.py
+echo -e "\n# Create client.py\n"
+echo "# My initial Python code" > client.py
 
 echo -e "\n# First commit\n"
-git add my_code.py
-git commit -m "Initial commit: added my_code.py"
+git add client.py
+git commit -m "Initial commit: added client.py"
 
 echo -e "\n# Second commit\n"
-echo "print('Hello, BeCode!')" >> my_code.py
+echo "print('Hello, BeCode!')" >> client.py
 git commit -am "Second commit: added print statement"
 
 echo -e "\n# Third commit\n"
-echo "print('Another line')" >> my_code.py
+echo "print('Another line')" >> client.py
 git commit -am "Third commit: added another line"
 
 echo -e "\n# Log history\n"
