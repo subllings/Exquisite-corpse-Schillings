@@ -23,7 +23,7 @@
 # ──────────────────────────────────────────────────────────────
 
 
-# Clear the screen for better readability
+# Clear the screen 
 # clear
 
 # Show current directory
