@@ -3,7 +3,7 @@
 # Description:
 #   This script processes all .sh files in the current directory by:
 #     1. Converting Windows-style line endings (CRLF) to Unix-style (LF)
-#     2. Removing hidden BOM characters if present
+#     2. Removing hidden Byte Order Mark (lirke #EF #BB #BF) characters if present
 #     3. Setting executable permission for each script
 #
 # Usage:
