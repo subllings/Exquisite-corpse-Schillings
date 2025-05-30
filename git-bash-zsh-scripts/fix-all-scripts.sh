@@ -29,4 +29,6 @@ for script in *.sh; do
   fi
 done
 
-echo -e "\n All scripts cleaned and ready to run.\n"
+echo ""
+echo "\n All scripts cleaned and ready to run.\n"
+echo ""
