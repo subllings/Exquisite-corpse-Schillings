@@ -104,26 +104,56 @@ sed -i 's/\r$//' *.sh
 ## Configure Git Identity (Required Before Running the Script)
 
 The script `25-time-machine-zsh.sh` uses Git commands that create commits.  
-To avoid errors, you must ensure that your Git identity is correctly set up before running the script.
+To avoid errors, you must ensure that your Git identity is correctly set up **before running the script**.
 
-If it's not already done, you should modify the script `25-time-machine-zsh.sh` to include the following lines (or run them manually beforehand):
+If it's not already done, you should configure your identity **globally** or **locally**:
+
+### Option 1: Configure Globally
+
+Run the following commands once on your machine:
 
 ```bash
-git config --global user.name "{user.name}"
-git config --global user.email "{user.email}"
+git config --global user.name "your-global-username"
+git config --global user.email "your-global-email@example.com"
 ```
 
-### Explanation:
+#### Explanation:
 
-- `git config --global` – Sets the configuration for all Git repositories on your machine.
-- `user.name` – Your Git username, visible in commit logs.
-- `user.email` – Your Git email address, used to link commits to your account.
+- `git config --global` – Applies the configuration to all Git repositories on your system.
+- `user.name` – Your Git username, shown in commit history.
+- `user.email` – Your Git email, used to link commits to your identity.
 
-### You can also configure identity locally (per repository):
+### Option 2: Configure Locally (per project)
+
+Run these commands from inside your project folder if you want to use a different identity just for this repository:
+
+```bash
+cd /path/to/your/repo
+git config user.name "your-local-username"
+git config user.email "your-local-email@example.com"
+```
+
+#### Explanation:
+
+- `cd /path/to/your/repo` – Navigate to your project repository.
+- `git config user.name` – Sets your username for this specific repo only.
+- `git config user.email` – Sets your email for this specific repo only.
+
+
+### Link with the Script (`25-time-machine-zsh.sh`)
+
+In the script, the following lines appear:
 
 ```bash
 47: git config user.name "your-local-username"
 48: git config user.email "your-local-email@example.com"
 ```
 
-Modify the script by changing lines 47, 48, or make sure to run them once globally, and delete lines 47, 48 from the script
+You have two options:
+
+- **Recommended:** Configure Git manually using global or local config as shown above,  
+  then **delete lines 47 and 48** from the script to avoid hardcoded identities.
+
+- **Alternative (less secure):** Keep these lines in the script, but **replace** the placeholders with your actual Git identity.
+
+This ensures that Git won't fail due to missing identity, and avoids exposing credentials in shared code.
