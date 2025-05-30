@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # ──────────────────────────────────────────────────────────────
-# Note: This script is designed to be run in a Zsh environment.    
+# Note:  1) This script is designed to be run in a Zsh environment.  
+#        2) Update your Git identity (line 47, 48, if not done globally) 
 # ──────────────────────────────────────────────────────────────
 # Title : Exercise 2, Git Logs & Checkout - Time Machine
 #
@@ -44,8 +45,8 @@ fi
 cd "$TARGET_DIR" || { echo "Error: Cannot enter directory"; exit 1; }
 
 # Git identity (required if commits are created later)
-git config --global user.name "your Git account name"
-git config --global user.email "your Git account email"
+# git config --global user.name "your Git account name"
+# git config --global user.email "your Git account email"
 
 # Show the first commits
 echo -e "\n# Showing first commits in the repository:\n"
