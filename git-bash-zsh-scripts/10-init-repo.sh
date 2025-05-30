@@ -6,7 +6,7 @@
 # Title: Exercise 1 - Git Init & First Commits
 #
 # Description: This script clones a repo, explores its commit history, and traces
-#              the evolution of the variable TARGET in client.py
+#              the evolution of the variable TARGET in my_code.py
 #
 # Author: Yves Schillings
 # Date: 28-05-2025
