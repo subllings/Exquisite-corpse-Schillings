@@ -91,7 +91,6 @@ echo -e "   git add my_code.py"
 echo -e "   git commit -m 'Resolved merge conflict'\n"
 
 echo -e "[Exercise 3] completed.\n"
-read -p "Press Enter to continue..."
 
 # End of script
 # ──────────────────────────────────────────────────────────────

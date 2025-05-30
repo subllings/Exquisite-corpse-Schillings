@@ -6,7 +6,7 @@
 # Title: Exercise 2 - Git Logs & Checkout - Time Machine
 #
 # Description: This script clones a repo, explores its commit history, and traces
-#              the evolution of the variable TARGET in my_code.py
+#              the evolution of the variable TARGET in client.py
 #
 # Author: Yves Schillings
 # Date: 28-05-2025
@@ -60,21 +60,21 @@ echo -e "\n# First commit hash: $first_commit\n"
 echo -e "# First commit details:\n"
 git show "$first_commit" --no-patch --pretty=format:"Author: %an <%ae>%nDate: %ad%nMessage: %s"
 
-# Check the initial value of TARGET in my_code.py
-echo -e "\n# Initial value of TARGET in my_code.py:\n"
+# Check the initial value of TARGET in client.py
+echo -e "\n# Initial value of TARGET in client.py:\n"
 git checkout "$first_commit"
-grep "TARGET" my_code.py || echo -e "TARGET not found in initial version."
+grep "TARGET" client.py || echo -e "TARGET not found in initial version."
 
 # Return to latest commit (main or master branch)
 git checkout main 2>/dev/null || git checkout master
 
 # Show how TARGET evolved in the Git history
-echo -e "\n# Evolution of TARGET in my_code.py across history:\n"
-git log -p --follow -- my_code.py | grep "TARGET" | grep -v '^-' || echo -e "No changes to TARGET found."
+echo -e "\n# Evolution of TARGET in client.py across history:\n"
+git log -p --follow -- client.py | grep "TARGET" | grep -v '^-' || echo -e "No changes to TARGET found."
 
 # Use git diff to compare changes in TARGET between two latest commits
-echo -e "\n# Using git diff to compare last two commits of my_code.py:\n"
-git diff HEAD~1 HEAD -- my_code.py
+echo -e "\n# Using git diff to compare last two commits of client.py:\n"
+git diff HEAD~1 HEAD -- client.py
 
 echo -e "\n [Exercise 2] completed\n"
 
