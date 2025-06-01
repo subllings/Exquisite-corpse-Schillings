@@ -26,7 +26,7 @@ if [ ! -f "README2.md" ]; then
   touch README2.md
 fi
 
-# 
+# Write 3 lines in the file 
 echo -e "\nLine 1 from $MY_BRANCH" >> README2.md
 echo "Line 2 from $MY_BRANCH" >> README2.md
 echo "Line 3 from $MY_BRANCH" >> README2.md
